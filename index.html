@@ -1,77 +1,112 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>حساب امیرعلی</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- فونت -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- آیکون -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <header>
-            <h1>حساب امیرعلی</h1>
-            <p>مدیریت خریدهای نسیه</p>
-        </header>
+<header>
 
-        <div class="top-box">
-            <button id="addBtn">➕ افزودن خرید</button>
+<h1>حساب امیرعلی</h1>
 
-            <div class="total-box">
-                جمع کل:
-                <span id="totalPrice">0</span>
-                تومان
-            </div>
-        </div>
+<p>مدیریت خریدهای نسیه</p>
 
-        <div class="table-box">
-            <table>
-                <thead>
-                    <tr>
-                        <th>محصول</th>
-                        <th>تعداد</th>
-                        <th>قیمت</th>
-                        <th>جمع</th>
-                        <th>تاریخ</th>
-                        <th>ساعت</th>
-                        <th>عملیات</th>
-                    </tr>
-                </thead>
+</header>
 
-                <tbody id="productList">
-                </tbody>
-            </table>
-        </div>
+<div class="dashboard">
 
-    </div>
+<div class="card">
+<h3>جمع بدهی</h3>
+<span id="totalPrice">0</span>
+</div>
 
-    <!-- پنجره افزودن -->
-    <div class="modal" id="modal">
+<div class="card">
+<h3>تعداد خرید</h3>
+<span id="totalItems">0</span>
+</div>
 
-        <div class="modal-content">
+<div class="card">
+<h3>امروز</h3>
+<span id="todayDate">--</span>
+</div>
 
-            <h2>افزودن خرید</h2>
+</div>
 
-            <input type="text" id="name" placeholder="نام محصول">
+<div class="toolbar">
 
-            <input type="number" id="count" placeholder="تعداد">
+<input
+type="text"
+id="search"
+placeholder="جستجوی محصول...">
 
-            <input type="number" id="price" placeholder="قیمت هر عدد">
+<button id="addBtn">
+<i class="fa-solid fa-plus"></i>
+افزودن خرید
+</button>
 
-            <input type="date" id="date">
+</div>
 
-            <input type="time" id="time">
+<div id="products" class="products"></div>
 
-            <button id="saveBtn">ثبت</button>
+</div>
 
-            <button id="closeBtn">بستن</button>
+<!-- فرم -->
 
-        </div>
+<div class="modal" id="modal">
 
-    </div>
+<div class="modal-box">
 
-    <script src="script.js"></script>
+<h2>ثبت خرید</h2>
+
+<input id="name" placeholder="نام محصول">
+
+<input id="count" type="number" placeholder="تعداد">
+
+<input id="price" type="number" placeholder="قیمت">
+
+<input id="date" type="date">
+
+<input id="time" type="time">
+
+<textarea
+id="note"
+placeholder="توضیحات"></textarea>
+
+<div class="buttons">
+
+<button id="saveBtn">
+ذخیره
+</button>
+
+<button id="closeBtn">
+انصراف
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
-  </html>
+
+</html>
